@@ -1,17 +1,111 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 17 | @use 'components/buttons';
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   SASS\main.scss 17:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 17 \2502  @use 'components/buttons';\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   SASS\\main.scss 17:1  root stylesheet";
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #101010;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Shrikhand", cursive;
+}
+
+p, span, li, input, textarea, button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: #101010;
+}
+.header__back {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #101010;
+  opacity: 0;
+  pointer-events: none;
+}
+.header--with-back .header__back {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #eaeaea;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.location__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  gap: 1rem;
+}
+.location__label {
+  color: rgb(53, 53, 53);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.location__icon {
+  color: rgb(53, 53, 53);
+}
+.location__input {
+  flex: 0 1 auto;
+  min-width: 0;
+  border: none;
+  background-color: #eaeaea;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  outline: none;
+}
+.location__input::placeholder {
+  color: rgb(53, 53, 53);
+  font-family: "Roboto", sans-serif;
+  opacity: 1;
+  font-weight: 500;
+}
+.location__input:focus::placeholder {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

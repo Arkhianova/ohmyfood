@@ -1,12 +1,13 @@
 // Abstracts
-@use 'abstracts/variables';
+@use 'abstracts/variables' as vars;
 @use 'abstracts/mixins';
 @use 'abstracts/functions';
 
 // Base
 @use 'base/reset';
-@use 'base/typography';
 @use 'base/base';
+@use 'base/typography';
+
 
 // Layout
 @use 'layout/header';
@@ -14,7 +15,7 @@
 @use 'layout/navigation';
 
 // Components
-@use 'components/buttons';
+@use 'components/location';
 @use 'components/cards';
 
 // Pages
