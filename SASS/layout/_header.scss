@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &__logo {
+    font-family: $font-title;
+    font-size: 1.5rem;
+    color: $black;
+  }
+
+  &__back {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: $black;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &--with-back &__back {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
