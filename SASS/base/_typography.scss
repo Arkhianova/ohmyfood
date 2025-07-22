@@ -1,11 +1,27 @@
 @use '../abstracts/variables' as vars;
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: vars.$font-title;
+
+@mixin home-typo-title {
+  font-family: vars.$font-home-main;
+  font-weight: 700;
+  font-size: 1.5rem; // 24px
+  line-height: 1;
+  text-align: center;
 }
 
-p, span, li, input, textarea, button {
-  font-family: vars.$font-main;
-  font-size: 1rem;
+@mixin home-typo-paragraph {
+  font-family: vars.$font-home-main;
+  font-weight: 300;
+  font-size: 1.125rem; // 18px
   line-height: 1;
+  text-align: center;
+}
+
+@mixin home-typo-button {
+  font-family: vars.$font-home-main;
+  font-weight: 500;
+  font-size: 1rem; // 16px
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
 }

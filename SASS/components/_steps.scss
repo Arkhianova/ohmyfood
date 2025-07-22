@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+
+.steps {
+  padding: 2rem 1rem;
+  background-color: vars.$white;
+
+  &__title {
+    font-family: vars.$font-main;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    counter-reset: step-counter;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem 1rem 3.5rem;
+    background-color: lighten(vars.$black, 95%);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    font-family: vars.$font-main;
+
+    i {
+      margin-right: 1rem;
+      color: vars.$black;
+      font-size: 1.1rem;
+    }
+
+    &::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      left: -0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2rem;
+      height: 2rem;
+      background-color: vars.$primary;
+      color: vars.$white;
+      font-weight: 700;
+      font-size: 0.875rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

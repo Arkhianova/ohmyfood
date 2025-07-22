@@ -3,13 +3,13 @@
 
 .header {
   position: relative;
-   @include mixins.flex-cont(row, center, center);
+  @include mixins.flex-cont(row, center, center);
   height: 4rem;
   background-color: vars.$white;
   @include mixins.box-shadow(0, 2px, 4px, 0, rgba(0, 0, 0, 0.15));
 
   &__logo {
-    font-family: vars.$font-title;
+    font-family: vars.$font-logo;
     font-size: 1.875rem;
     font-weight: 400;
     color: vars.$black;

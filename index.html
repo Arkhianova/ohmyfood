@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" >
-  <title>Ohmyfood</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <link rel="preconnect" href="https://fonts.googleapis.com" >
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet" >
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ohmyfood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" >
-  <link rel="stylesheet" href="css/main.css" >
-</head>
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<body class="home">
+  <body class="home">
+    <header class="header">
+      <a href="index.html" class="header__back" aria-label="Retour à l’accueil">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h1 class="header__logo">ohmyfood</h1>
+    </header>
 
-  <header class="header">
-    <a href="index.html" class="header__back" aria-label="Retour à l’accueil">
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
-    <h1 class="header__logo">ohmyfood</h1>
-  </header>
-
-  <form class="location" action="#" method="get" aria-label="Saisir votre lieu">
-  <div class="location__container">
-    <label for="location-input" class="location__label">
-      <i class="fa-solid fa-location-dot location__icon" aria-hidden="true"></i>
-    </label>
-    <input
-      id="location-input"
-      type="text"
-      class="location__input"
-      placeholder="Paris, Belleville"
-      required 
+    <form
+      class="location"
+      action="#"
+      method="get"
+      aria-label="Saisir votre lieu"
     >
-  </div>
-</form>
+      <div class="location__container">
+        <label for="location-input" class="location__label">
+          <i
+            class="fa-solid fa-location-dot location__icon"
+            aria-hidden="true"
+          ></i>
+        </label>
+        <input
+          id="location-input"
+          type="text"
+          class="location__input"
+          placeholder="Paris, Belleville"
+          required
+        />
+      </div>
+    </form>
 
-</body>
+    <main class="main-homepage">
+      <section class="hero hero-main">
+        <h2 class="hero__title">Réservez le menu qui vous convient</h2>
+        <p class="hero__subtitle">
+          Découvrez des restaurants d’exception, sélectionnés par nos soins.
+        </p>
+        <a href="#restaurants" class="hero__button">Explorer nos restaurants</a>
+      </section>
+      
+      <section class="steps">
+        <h2 class="steps__title">Fonctionnement</h2>
+        <ol class="steps__list">
+          <li class="steps__item">
+            <span class="steps__number">1</span>
+            <i
+              class="steps__icon fa-solid fa-mobile-screen-button"
+              aria-hidden="true"
+            ></i>
+            <p class="steps__text">Choisissez un restaurant</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">2</span>
+            <i class="steps__icon fa-solid fa-list" aria-hidden="true"></i>
+            <p class="steps__text">Composez votre menu</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__number">3</span>
+            <i class="steps__icon fa-solid fa-store" aria-hidden="true"></i>
+            <p class="steps__text">Dégustez au restaurant</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+  </body>
 </html>

@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mixins;
 
+
 .location {
   @include mixins.flex-cont(row, center, center);
   padding: 0.75rem 1rem;
@@ -30,14 +31,14 @@
     min-width: 0; // important pour éviter le dépassement dans flexbox
     border: none;
     background-color: vars.$grey-bg;
-    font-family: vars.$font-main;
+    font-family: vars.$font-home-main;
     font-size: 1rem;
     border-radius: 6px;
     outline: none;
 
     &::placeholder {
       color: vars.$font-color;
-      font-family: vars.$font-main;
+      font-family: vars.$font-home-main;
       opacity: 1;
       font-weight: 500;
     }
