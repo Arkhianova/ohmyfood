@@ -1,12 +1,12 @@
 // Abstracts
 @use 'abstracts/variables' as vars;
-@use 'abstracts/mixins';
+@use 'abstracts/mixins' as mixins;
 @use 'abstracts/functions';
 
 // Base
 @use 'base/reset';
 @use 'base/base';
-@use 'base/typography';
+@use 'base/typography' as typo;
 
 
 // Layout
@@ -17,6 +17,8 @@
 // Components
 @use 'components/location';
 @use 'components/cards';
+@use 'components/button';
+@use 'components/hero-main';
 
 // Pages
 @use 'pages/home';
