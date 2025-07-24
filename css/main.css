@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 html {
@@ -47,28 +48,6 @@ body {
 .header--with-back .header__back {
   opacity: 1;
   pointer-events: all;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2rem 1rem;
-  text-align: center;
-  background-color: #eaeaea;
-}
-.hero__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-family: "Roboto", sans-serif;
-}
-.hero__subtitle {
-  font-size: 1.125rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .location {
@@ -134,8 +113,47 @@ body {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.2;
+}
+
+.heroHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #eaeaea;
+}
+.heroHome__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.heroHome__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.2;
   text-align: center;
-  vertical-align: middle;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+.steps__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  counter-reset: step-counter;
 }
 
 /*# sourceMappingURL=main.css.map */

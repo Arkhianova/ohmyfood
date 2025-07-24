@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography" as typo;
+
+.heroHome {
+  @include mix.flex-cont(column, flex-start, center);
+  padding: 2rem 1rem;
+  background-color: vars.$grey-bg;
+
+  &__title {
+    @include typo.home-typo-title;
+    margin-bottom: 1rem;
+   
+  }
+
+  &__subtitle {
+    @include typo.home-typo-paragraph;
+    margin-bottom: 2rem;
+  }
+}
+
+.steps {
+  padding: 2rem 1rem;
+  background-color: vars.$white;
+
+  &__title {
+    @include typo.home-typo-title;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    counter-reset: step-counter;
+    
+  }
+
+ 
+}
