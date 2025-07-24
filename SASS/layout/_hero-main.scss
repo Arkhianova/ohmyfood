@@ -4,17 +4,21 @@
 
 .hero {
   @include mix.flex-cont(column, flex-start, center);
-  padding: 2.5rem 1rem 3.4rem 1rem;
-  background-color: vars.$hero-bg;
-  &__title {
-    @include typo.home-typo-title;
-    margin-bottom: 1rem;
-    padding: 0 1.9rem;
-  }
-  &__subtitle {
-    @include typo.home-typo-paragraph;
-    margin-bottom: 1.8rem;
-    padding: 0 0.5rem;
-  } 
-}
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: vars.$grey-bg;
 
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: vars.$font-home-main;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    font-family: vars.$font-home-main;
+  }
+}

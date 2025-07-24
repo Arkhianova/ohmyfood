@@ -1,16 +1,14 @@
-@use "../abstracts/variables" as vars;
+@use 'variables' as vars;
 
-@mixin flex-cont($direction: row,$justify: flex-start,$align: stretch) {
+/// Flex container
+@mixin flex-cont($direction: row, $justify: flex-start, $align: stretch) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
 }
 
-@mixin box-shadow($x: 0px, $y: 4px, $blur: 0px, $spread: 0px, $color: rgba(0, 0, 0, 0.8)) {
-  box-shadow: $x $y $blur $spread $color;
-}
-
+/// Bouton de base
 @mixin button-default {
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -20,4 +18,9 @@
   color: vars.$white;
   text-decoration: none;
   cursor: pointer;
+}
+
+/// Box shadow
+@mixin box-shadow($x, $y, $blur, $spread, $color) {
+  box-shadow: $x $y $blur $spread $color;
 }
