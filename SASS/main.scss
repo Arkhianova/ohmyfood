@@ -13,12 +13,12 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/homepage';
+@use 'layout/hero-main';
 
 // Components
 @use 'components/location';
 @use 'components/cards';
 @use 'components/button';
-@use 'components/hero-main';
 
 // Pages
 @use 'pages/home';
