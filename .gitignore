@@ -1,0 +1,42 @@
+# Fichiers de logs
+*.log
+*.log.*
+
+# Dossiers de dépendances
+node_modules/
+vendor/
+
+# Environnements virtuels Python
+venv/
+.env/
+.env
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Fichiers compilés
+*.pyc
+*.class
+*.o
+*.so
+
+# Caches
+__pycache__/
+.cache/
+dist/
+build/
+
+# IDE / éditeurs
+.vscode/
+.idea/
+
+# Fichiers spécifiques à Git
+.git/
+.gitignore
+
+# fichiers de projets
+prompt.txt
