@@ -4,38 +4,40 @@
 
  .stepItem {
     position: relative;
-    display: flex;
-    align-items: center;
-    padding: 1rem 1rem 1rem 3.5rem;
-    background-color: lighten(vars.$black, 95%);
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    font-weight: 500;
-    font-family: vars.$font-main;
-
-    i {
-      margin-right: 1rem;
-      color: vars.$black;
-      font-size: 1.1rem;
-    }
-
-    &::before {
-      counter-increment: step-counter;
-      content: counter(step-counter);
-      position: absolute;
-      left: -0.75rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 2rem;
-      height: 2rem;
+    @include mixins.flex-cont(row, flex-start, flex-end, 1.3rem);
+    background-color: vars.$hero-bg;
+    border-radius: 20px;
+    @include mixins.box-shadow(0px, 4px, 15px, 1px, rgb(216, 216, 216));
+    font-family: vars.$font-home-main;
+    padding: 1.5rem 0;
+    
+    &__number {
+      text-align: center;
+      padding-top: 0.3rem;
       background-color: vars.$primary;
       color: vars.$white;
-      font-weight: 700;
-      font-size: 0.875rem;
+      font-family: vars.$font-home-main;
+      font-weight: 500;
+      font-size: 0.8rem;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 24px;
+      height: 24px;
+      margin-left: -0.7rem;
+    }
+    &__icon {
+      align-self: flex-start;
+      color: vars.$color-step-icon;
+      font-size: 1.2rem;
+    }
+    .fa-store {
+      color: vars.$primary;
+    }
+    &__text {
+      align-self: flex-end;
+
+      padding-left: 0.3rem;
+      padding-right: 4.5rem;
+      font-weight: 500;
     }
   }
 

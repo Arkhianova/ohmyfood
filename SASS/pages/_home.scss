@@ -3,36 +3,37 @@
 @use "../base/typography" as typo;
 
 .heroHome {
-  @include mix.flex-cont(column, flex-start, center);
-  padding: 2rem 1rem;
-  background-color: vars.$grey-bg;
+  @include mix.flex-cont(column, flex-start, center, 0rem);
+  padding: 1.5rem 1.2rem 3.5rem 1.2rem;
+  background-color: vars.$hero-bg;
 
   &__title {
     @include typo.home-typo-title;
-    margin-bottom: 1rem;
+    padding: 0.8rem 1.7rem;
    
   }
 
   &__subtitle {
     @include typo.home-typo-paragraph;
-    margin-bottom: 2rem;
+    padding: 0 0.8rem 1.8rem 1rem;
   }
 }
 
 .steps {
-  padding: 2rem 1rem;
+  padding: 3rem 1.2rem 4rem 1.25rem;
   background-color: vars.$white;
+  @include mix.flex-cont(column, flex-start, flex-end, 1.8rem);
 
   &__title {
     @include typo.home-typo-title;
+    align-self: flex-start;
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    align-self: stretch;
+    padding-left: 0.8rem;
+    @include mix.flex-cont(column, flex-start, stretch, 1.5rem);
     counter-reset: step-counter;
-    
   }
 
  
