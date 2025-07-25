@@ -20,10 +20,10 @@
 }
 
 .steps {
+  @include mix.flex-cont(column, flex-start, flex-end, 1.8rem);
   padding: 3rem 1.2rem 4rem 1.25rem;
   background-color: vars.$white;
-  @include mix.flex-cont(column, flex-start, flex-end, 1.8rem);
-
+  
   &__title {
     @include typo.home-typo-title;
     align-self: flex-start;
@@ -35,7 +35,26 @@
     @include mix.flex-cont(column, flex-start, stretch, 1.5rem);
     counter-reset: step-counter;
   }
+}
 
- 
+.restaurants {
+  @include mix.flex-cont(column, flex-start, flex-start, 1.5rem);
+  padding: 3.5rem 1.1rem;
+  background-color: vars.$hero-bg;
+  
+  &__title {
+    @include typo.home-typo-title;
+    align-self: flex-start;
+  }
+
+  &__list {
+    @include mix.flex-cont(column, flex-start, center, 1.5rem);
+    width: 100%;
+  }
+}
+.restaurants a {
+  display: block;
+  width: 100%;
+  max-width: unset;
 }
 
