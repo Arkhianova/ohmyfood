@@ -110,14 +110,14 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 0.5rem;
+  gap: 0rem;
   background-color: #ffffff;
   border-radius: 1rem;
   overflow: hidden;
 }
 .restaurant-card__img {
   width: 100%;
-  max-height: 180px;
+  max-height: 178px;
   object-fit: cover;
   object-position: center bottom;
 }
@@ -126,15 +126,15 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  gap: 2rem;
-  padding: 0.5rem;
-  max-height: 251px;
+  gap: 0rem;
+  padding: 1rem 1.5rem 0.9rem 0.8rem;
+  max-height: 231px;
 }
 .restaurant-card__txt {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   gap: 0.25rem;
 }
@@ -149,12 +149,26 @@ body {
 .restaurant-card__txt p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.2;
   text-align: center;
   color: #101010;
 }
+.restaurant-card__like > .fa-regular.fa-heart {
+  margin-top: 0.3rem;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
 .restaurant-card__like {
+  position: relative;
+}
+.restaurant-card__like .like-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.restaurant-card__like .like-label {
+  cursor: pointer;
   font-size: 1.5rem;
 }
 
@@ -263,7 +277,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 1.5rem;
+  gap: 1rem;
   counter-reset: step-counter;
 }
 
@@ -272,7 +286,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1.2rem;
   padding: 3rem 1.1rem;
   background-color: #f6f6f6;
 }
@@ -292,11 +306,14 @@ body {
   gap: 1.5rem;
   width: 100%;
 }
-
 .restaurants a {
   display: block;
   width: 100%;
   max-width: unset;
+}
+
+.restaurants:has(.fa-heart:hover) a {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */

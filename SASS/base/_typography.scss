@@ -16,7 +16,6 @@
   text-align: center;
 }
 
-
 @mixin home-typo-paragraph {
   font-family: vars.$font-home-main;
   font-weight: 300;
@@ -27,11 +26,11 @@
 @mixin card-typo-paragraph {
   font-family: vars.$font-home-main;
   font-weight: 300;
-  font-size: 1.0625rem; // 18px
+  font-size: 1.0625rem; // 17px
   line-height: 1.2;
   text-align: center;
-
 }
+
 @mixin home-typo-button {
   font-family: vars.$font-home-main;
   font-weight: 500;

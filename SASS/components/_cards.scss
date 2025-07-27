@@ -3,40 +3,62 @@
 @use '../base/typography' as typo;
 
 .restaurant-card {
-  @include mix.flex-cont(column, flex-start, stretch, 0.5rem);
+  @include mix.flex-cont(column, flex-start, stretch, 0rem);
   background-color: vars.$white;
   border-radius: 1rem;
   overflow: hidden;
+  width: 100%;
   
   &__img {
     width: 100%;
-    max-height: 180px;
+    max-height: 178px;
     object-fit: cover;
     object-position: center bottom;
   }
 
   &__content {
-    @include mix.flex-cont(row, space-between, stretch, 2rem);
-    padding: 0.5rem;
-    max-height: 251px;
+    @include mix.flex-cont(row, space-between, stretch, 0rem);
+    padding: 1rem 1.5rem 0.9rem 0.8rem;
+    max-height: 231px;
   }
 
-    &__txt {
-    @include mix.flex-cont(column, stretch, center, 1rem);
+  &__txt {
+    @include mix.flex-cont(column, stretch, flex-start, 1rem);
     gap: 0.25rem;
 
     h3 {
-      @include typo.card-typo-title;
-      color: vars.$black;
+    @include typo.card-typo-title;
+    color: vars.$black;
     }
 
     p {
-      @include typo.home-typo-paragraph;
+      @include typo.card-typo-paragraph;
       color: vars.$black;
     }
   }
 
-  &__like {
+  &__like > .fa-regular.fa-heart {
+    margin-top: 0.3rem;
+    font-style:normal;
     font-size: 1.5rem;
   }
 }
+
+
+// Rendre le label cliquable et positionné
+.restaurant-card__like {
+  position: relative;
+
+  .like-checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .like-label {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+}
+
+
+
