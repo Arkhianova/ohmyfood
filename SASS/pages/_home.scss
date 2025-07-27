@@ -60,6 +60,13 @@
  
 }
 
-  
+// svg {
+//   pointer-events: none; /* Le SVG entier ne capte rien */
+// }
+
+// svg path {
+//   pointer-events: auto; /* Seul le path capte les événements */
+// }
+
 
 
