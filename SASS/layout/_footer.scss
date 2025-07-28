@@ -1,0 +1,52 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+@use '../base/typography' as typo;
+
+
+.footer {
+  @include mixins.flex-cont(column, flex-start, flex-start, 1rem);
+  background-color: vars.$color-header-icon;
+  color: white;
+  padding: 1.375rem 1.5625rem;
+
+  &__title {
+    font-family: vars.$font-logo;
+    font-weight: 100;
+  }
+  &__list {
+    @include mixins.flex-cont(column, flex-start, flex-start, 0.5rem);
+    
+  }
+  @each $j in 1, 2 {
+    &__list > *:nth-child(#{$j}) {
+      @include typo.home-typo-button;
+    }
+  }
+
+  @each $i in 3, 4 {
+    &__list > *:nth-child(#{$i}) {
+      @include typo.home-typo-button {
+        font-weight: 400;
+      };
+    }
+  }
+    svg {
+      fill: white;
+      width: 0.9rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+      stroke-width: 0;
+
+    }
+    i {
+      margin-right: 0.8rem;
+    }
+    .fa-utensils {
+    color: white;
+    }
+    a {
+      color: inherit;
+    }
+
+}
+

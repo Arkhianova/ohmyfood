@@ -52,6 +52,66 @@ body {
   pointer-events: all;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #353535;
+  color: white;
+  padding: 1.375rem 1.5625rem;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.footer__list > *:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.footer__list > *:nth-child(2) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.footer__list > *:nth-child(3) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer__list > *:nth-child(4) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer svg {
+  fill: white;
+  width: 0.9rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  stroke-width: 0;
+}
+.footer i {
+  margin-right: 0.8rem;
+}
+.footer .fa-utensils {
+  color: white;
+}
+.footer a {
+  color: inherit;
+}
+
 .location {
   display: flex;
   flex-direction: row;
