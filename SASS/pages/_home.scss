@@ -39,7 +39,7 @@
 
 .restaurants {
   @include mix.flex-cont(column, flex-start, flex-start, 1.2rem);
-  padding: 3rem 1.1rem;
+  padding: 3.3rem 1.1rem 4.3rem 1.1rem;
   background-color: vars.$hero-bg;
   
   &__title {
@@ -48,25 +48,25 @@
   }
 
   &__list {
-    @include mix.flex-cont(column, flex-start, center, 1.5rem);
+    @include mix.flex-cont(column, flex-start, center, 1.2rem);
     width: 100%;
   }
 
-  a {
-  display: block;
-  width: 100%;
-  max-width: unset;
+  @each $i in 1, 2 {
+    &__list > *:nth-child(#{$i}) a::before {
+      content: "Nouveau";
+      position: absolute;
+      right: 0.75rem;
+      top: 0.8125rem;
+      align-items: center;
+      background-color: vars.$green;
+      color: vars.$green-font;
+      padding: 0.4rem 0.7rem;
+      @include typo.home-typo-button {
+        font-size: 0.875rem;
+      }
+    }
   }
- 
+
 }
-
-// svg {
-//   pointer-events: none; /* Le SVG entier ne capte rien */
-// }
-
-// svg path {
-//   pointer-events: auto; /* Seul le path capte les événements */
-// }
-
-
 

@@ -114,6 +114,8 @@ body {
   background-color: #ffffff;
   border-radius: 1rem;
   overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 .restaurant-card__img {
   width: 100%;
@@ -121,22 +123,24 @@ body {
   object-fit: cover;
   object-position: center bottom;
 }
+.restaurant-card__img.patch-position {
+  object-position: center 60%;
+}
 .restaurant-card__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   gap: 0rem;
-  padding: 1rem 1.5rem 0.9rem 0.8rem;
-  max-height: 231px;
+  padding: 0.8rem 1.5rem 0.9rem 0.8rem;
+  max-height: 230px;
 }
 .restaurant-card__txt {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: flex-start;
-  gap: 1rem;
-  gap: 0.25rem;
+  gap: 0.23rem;
 }
 .restaurant-card__txt h3 {
   font-family: "Roboto", sans-serif;
@@ -154,22 +158,14 @@ body {
   text-align: center;
   color: #101010;
 }
-.restaurant-card__like > .fa-regular.fa-heart {
-  margin-top: 0.3rem;
-  font-style: normal;
-  font-size: 1.5rem;
-}
-
 .restaurant-card__like {
-  position: relative;
-}
-.restaurant-card__like .like-checkbox {
   position: absolute;
-  left: -9999px;
+  bottom: 2.05rem;
+  right: 1.5rem;
 }
-.restaurant-card__like .like-label {
-  cursor: pointer;
+.restaurant-card__like > .fa-regular.fa-heart {
   font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .btn {
@@ -287,7 +283,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.2rem;
-  padding: 3rem 1.1rem;
+  padding: 3.3rem 1.1rem 4.3rem 1.1rem;
   background-color: #f6f6f6;
 }
 .restaurants__title {
@@ -303,17 +299,36 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   width: 100%;
 }
-.restaurants a {
-  display: block;
-  width: 100%;
-  max-width: unset;
+.restaurants__list > *:nth-child(1) a::before {
+  content: "Nouveau";
+  position: absolute;
+  right: 0.75rem;
+  top: 0.8125rem;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 0.4rem 0.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-size: 0.875rem;
 }
-
-.restaurants:has(.fa-heart:hover) a {
-  pointer-events: none;
+.restaurants__list > *:nth-child(2) a::before {
+  content: "Nouveau";
+  position: absolute;
+  right: 0.75rem;
+  top: 0.8125rem;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 0.4rem 0.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=main.css.map */
