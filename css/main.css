@@ -177,6 +177,9 @@ body {
   width: 100%;
   position: relative;
 }
+.restaurant-card input {
+  display: none;
+}
 .restaurant-card__img {
   width: 100%;
   max-height: 178px;
@@ -223,9 +226,28 @@ body {
   bottom: 2.05rem;
   right: 1.5rem;
 }
-.restaurant-card__like > .fa-regular.fa-heart {
-  font-size: 1.5rem;
-  color: #ffffff;
+.restaurant-card__like .fa-heart {
+  transform: scale(1.5);
+}
+.restaurant-card .like-label {
+  position: relative;
+  display: inline-block;
+}
+.restaurant-card .like-label .full-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.restaurant-card__like:has(input:checked) .full-heart {
+  opacity: 1;
 }
 
 .btn {

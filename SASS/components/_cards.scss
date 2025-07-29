@@ -1,6 +1,6 @@
-@use '../abstracts/variables' as vars;
-@use '../abstracts/mixins' as mix;
-@use '../base/typography' as typo;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography" as typo;
 
 .restaurant-card {
   @include mix.flex-cont(column, flex-start, stretch, 0rem);
@@ -9,13 +9,16 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  
+
+  input {
+    display: none;
+  }
+
   &__img {
     width: 100%;
     max-height: 178px;
     object-fit: cover;
     object-position: center bottom;
-    
   }
   &__img.patch-position {
     object-position: center 60%;
@@ -31,8 +34,8 @@
     @include mix.flex-cont(column, stretch, flex-start, 0.23rem);
 
     h3 {
-    @include typo.card-typo-title;
-    color: vars.$black;
+      @include typo.card-typo-title;
+      color: vars.$black;
     }
 
     p {
@@ -47,15 +50,28 @@
     right: 1.5rem;
   }
 
-  &__like > .fa-regular.fa-heart {
-    font-size: 1.5rem;
-    color: vars.$white;
+  &__like .fa-heart {
+    transform: scale(1.5);
   }
-  
+  .like-label {
+    position: relative;
+    display: inline-block;
+
+    .full-heart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background: vars.$button-like;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+  }
+  &__like:has(input:checked) .full-heart {
+    opacity: 1;
+  }
 }
-  
-
-
-
-
-
