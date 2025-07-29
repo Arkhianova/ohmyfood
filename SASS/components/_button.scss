@@ -5,5 +5,25 @@
 .btn {
   @include mix.button-default;
   @include typo.home-typo-button;
-  @include mix.box-shadow(0, 4px, 10px, 0px, rgba(0, 0, 0, 0.1));
+  @include mix.box-shadow(0, 4px, 10px, 0px, rgba(0, 0, 0, 0.25));
+  z-index: 1;
+
+    &:hover{
+      opacity: 0.85; //quand on hover, on baisse l'opacité du btn défaut
+      &::after {
+            opacity: 1;
+    }
+  }
+
+  &::after {
+    @include mix.button-animate;
+    @include mix.box-shadow(0, 4px, 15px, 0, rgba(0, 0, 0, 0.35) );
+    opacity: 0;
+    z-index: -1;
+    transition: opacity ease-out 300ms;
+
 }
+  
+}
+
+
