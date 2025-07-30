@@ -317,13 +317,25 @@ body {
   height: 24px;
   margin-left: -0.7rem;
 }
-.stepItem__icon {
-  align-self: flex-start;
-  color: #7e7e7e;
+.stepItem__iconWrap {
+  display: flex;
+  position: relative;
   font-size: 1.2rem;
+  margin-bottom: 0.2rem;
 }
-.stepItem .fa-store {
+.stepItem__icon {
+  color: #7e7e7e;
+}
+.stepItem__icon--colored {
+  position: absolute;
+  top: 0;
+  left: 0;
   color: #9356DC;
+  opacity: 0;
+  z-index: 10;
+}
+.stepItem:hover .stepItem__icon--colored {
+  opacity: 1;
 }
 .stepItem__text {
   align-self: flex-end;
@@ -382,7 +394,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 1rem;
+  gap: 1.5rem;
   counter-reset: step-counter;
 }
 

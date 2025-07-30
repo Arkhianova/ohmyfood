@@ -24,17 +24,33 @@
       height: 24px;
       margin-left: -0.7rem;
     }
-    &__icon {
-      align-self: flex-start;
-      color: vars.$color-step-icon;
+
+    &__iconWrap {
+      display: flex;
+      position: relative;
       font-size: 1.2rem;
+      margin-bottom: 0.2rem;
     }
-    .fa-store {
+    &__icon {
+      color: vars.$color-step-icon;
+
+
+    }
+    &__icon--colored {
+      position: absolute;
+      top: 0;
+      left: 0;
       color: vars.$primary;
+      opacity: 0;
+      z-index: 10;
     }
+
+    &:hover .stepItem__icon--colored {
+      opacity: 1;
+    }
+
     &__text {
       align-self: flex-end;
-
       padding-left: 0.3rem;
       padding-right: 4.5rem;
       font-weight: 500;

@@ -32,7 +32,7 @@
   &__list {
     align-self: stretch;
     padding-left: 0.8rem;
-    @include mix.flex-cont(column, flex-start, stretch, 1rem);
+    @include mix.flex-cont(column, flex-start, stretch, 1.5rem);
     counter-reset: step-counter;
   }
 }
