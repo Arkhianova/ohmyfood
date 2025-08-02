@@ -19,6 +19,21 @@ body {
   font-size: 1rem;
 }
 
+header, form, main, footer {
+  animation: fadeIn 2s ease-in-out 3s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   position: relative;
   display: flex;
@@ -58,7 +73,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
-  background-color: #353535;
+  background-color: rgb(53, 53, 53);
   color: white;
   padding: 1.375rem 1.5625rem;
 }
@@ -344,6 +359,143 @@ body {
   font-weight: 500;
 }
 
+.animContainer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background: rgba(209, 209, 209, 0.2862745098);
+  animation: fadeOut 3s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.spinner {
+  background-color: rgba(146, 86, 220, 0.0431372549);
+  z-index: 1;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border: 0.3rem solid transparent;
+  border-right-color: #003A68;
+  border-bottom: #003A68;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out 3;
+  box-shadow: #9356dc 0 0 10px, #e3e7e6 0 0 20px, #ff79da 0 0 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  position: relative;
+  display: inline-flex;
+  width: 30rem;
+  height: 10rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  z-index: 2;
+}
+
+.loader__letter {
+  position: absolute;
+  display: inline;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+  color: #003A68;
+}
+
+.oh {
+  animation-name: showOh;
+  font-size: 2rem;
+}
+
+@keyframes showOh {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  25.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.my {
+  animation-name: showMy;
+  font-size: 2.5rem;
+}
+
+@keyframes showMy {
+  0% {
+    opacity: 0;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  37.51% {
+    opacity: 1;
+  }
+  62.5% {
+    opacity: 1;
+  }
+  62.51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.food {
+  animation-name: showFood;
+  background: #9356dc;
+  background: linear-gradient(90deg, rgb(147, 86, 220) 34%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+
+@keyframes showFood {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.01% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .heroHome {
   display: flex;
   flex-direction: column;
