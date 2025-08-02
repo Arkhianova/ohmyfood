@@ -1,0 +1,161 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography" as typo;
+
+.animContainer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background: #d1d1d149;
+  animation: fadeOut 3s ease forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.spinner {
+  background-color: #9256dc0b;
+  z-index: 1;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border: 0.3rem solid transparent;
+  border-right-color: vars.$blue2;
+  border-bottom: vars.$blue2;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out 3;
+  box-shadow: #9356dc 0 0 10px, #e3e7e6 0 0 20px, #ff79da 0 0 20px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  position: relative;
+  display: inline-flex;
+  width: 30rem;
+  height: 10rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: vars.$font-logo;
+  z-index: 2;
+}
+
+.loader__letter {
+  position: absolute;
+  display: inline;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+  color: vars.$blue2;
+}
+
+.oh {
+  animation-name: showOh;
+  font-size: 2rem;
+}
+// @keyframes showOh {
+//   0% { opacity: 1; }
+//   30% { opacity: 0; }
+//   60% { opacity: 0; }
+//   100% { opacity: 0; }
+// }
+@keyframes showOh {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  25.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.my {
+  animation-name: showMy;
+  font-size: 2.5rem;
+}
+// @keyframes showMy {
+//   0% { opacity: 0; }
+//   30% {opacity: 0;}
+//   60% { opacity: 1; }
+//   100% { opacity: 0; }
+// }
+@keyframes showMy {
+  0% {
+    opacity: 0;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  37.51% {
+    opacity: 1;
+  }
+  62.5% {
+    opacity: 1;
+  }
+  62.51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.food {
+  animation-name: showFood;
+  background: #9356dc;
+  background: linear-gradient(
+    90deg,
+    rgba(147, 86, 220, 1) 34%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+// @keyframes showFood {
+//   0% { opacity: 0; }
+//   30% {opacity: 0;}
+//   60% { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+@keyframes showFood {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.01% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
