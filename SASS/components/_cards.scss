@@ -4,11 +4,23 @@
 
 .restaurant-card {
   @include mix.flex-cont(column, flex-start, stretch, 0rem);
+  flex-wrap: wrap;
   background-color: vars.$white;
   border-radius: 1rem;
   overflow: hidden;
   width: 100%;
   position: relative;
+
+  @include mix.respond-to(vars.$bkp-500) {
+    max-width: 490px;
+    align-self: center;
+  }
+  @include mix.respond-to(vars.$bkp-650) {
+    max-width: 48%;
+  }
+  @include mix.respond-to(vars.$bkp-895) {
+    max-width: 46%;
+  }
 
   input {
     display: none;
@@ -20,8 +32,18 @@
     object-fit: cover;
     object-position: center bottom;
   }
-  &__img.patch-position {
+ 
+  &:nth-child(1) img {
     object-position: center 60%;
+  }
+  &:nth-child(2) img {
+    object-position: center 60%;
+  }
+  &:nth-child(3) img {
+    object-position: center 80%;
+  }
+  &:nth-child(4) img {
+    object-position: center 80%;
   }
 
   &__content {
@@ -64,9 +86,9 @@
       opacity: 0;
       background: vars.$button-like;
       background-clip: text;
-      -webkit-background-clip: text;
+
       color: transparent;
-      -webkit-text-fill-color: transparent;
+
       transition: opacity 0.5s ease;
       pointer-events: none;
     }

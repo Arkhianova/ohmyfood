@@ -8,9 +8,16 @@
   background-color: vars.$hero-bg;
 
   &__title {
-    @include typo.home-typo-title;
+    @include typo.home-typo-title{
+      text-align: center;
+    }
+    @include mix.respond-to(vars.$bkp-500) {
+    font-size: 2rem;
+    }
+    @include mix.respond-to(vars.$bkp-895) {
+    font-size: 2.5rem;
+    }
     padding: 0.8rem 1.7rem;
-   
   }
 
   &__subtitle {
@@ -20,36 +27,77 @@
 }
 
 .steps {
-  @include mix.flex-cont(column, flex-start, flex-end, 1.8rem);
+  @include mix.flex-cont(column, flex-start, stretch, 1.8rem);
   padding: 3rem 1.2rem 4rem 1.25rem;
   background-color: vars.$white;
-  
+  max-width: 1080px;
+
+  @include mix.respond-to(vars.$bkp-650) {
+    max-width: 618px;
+    align-items: flex-start;
+    margin: 0 auto; //permet de centrer le bloc
+  }
+  @include mix.respond-to(vars.$bkp-895) {
+    max-width: 1080px;
+    align-items: flex-start;
+    box-sizing: content-box;
+  }
+
   &__title {
     @include typo.home-typo-title;
-    align-self: flex-start;
+    @include mix.respond-to(vars.$bkp-650) {
+      align-self: flex-start;
+    }
   }
 
   &__list {
-    align-self: stretch;
-    padding-left: 0.8rem;
-    @include mix.flex-cont(column, flex-start, stretch, 1.5rem);
+    @include mix.flex-cont(column, flex-start, center, 1.5rem);
     counter-reset: step-counter;
+    width: 100%;
+
+    @include mix.respond-to(vars.$bkp-895) {
+      @include mix.flex-cont(row, space-between, center, 2rem);
+    }
   }
 }
 
 .restaurants {
-  @include mix.flex-cont(column, flex-start, flex-start, 1.2rem);
-  padding: 3.3rem 1.1rem 4.3rem 1.1rem;
+  @include mix.flex-cont(column, flex-start, stretch, 1.2rem);
+  padding: 3rem 1.2rem 4rem 1.25rem;
   background-color: vars.$hero-bg;
-  
+  background: vars.$hero-bg;
+
   &__title {
     @include typo.home-typo-title;
-    align-self: flex-start;
+    width: 100%;
+
+    @include mix.respond-to(vars.$bkp-650) {
+      width: 100%;
+      max-width: 618px;
+    }
+
+    @include mix.respond-to(vars.$bkp-895) {
+      max-width: 1080px;
+      align-self: center;
+      margin: 0;
+    }
   }
 
   &__list {
-    @include mix.flex-cont(column, flex-start, center, 1.2rem);
+    @include mix.flex-cont(column, flex-start, flex-start, 1.2rem);
     width: 100%;
+
+    @include mix.respond-to(vars.$bkp-650) {
+      @include mix.flex-cont(row, space-between, center, 1.5rem);
+      flex-wrap: wrap;
+    }
+
+    @include mix.respond-to(vars.$bkp-895) {
+      gap: 3rem;
+      width: 100%;
+      max-width: 1080px;
+      align-self: center;
+    }
   }
 
   @each $i in 1, 2 {
@@ -67,6 +115,4 @@
       }
     }
   }
-
 }
-

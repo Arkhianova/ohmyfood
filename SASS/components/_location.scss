@@ -1,7 +1,6 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mixins;
 
-
 .location {
   @include mixins.flex-cont(row, center, center);
   padding: 0.65rem 1rem;

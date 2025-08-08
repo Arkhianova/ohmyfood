@@ -1,7 +1,12 @@
-@use 'variables' as vars;
+@use "variables" as vars;
 
 /// Flex container
-@mixin flex-cont($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+@mixin flex-cont(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0
+) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -41,6 +46,30 @@
   border: none;
   text-decoration: none;
   cursor: pointer;
-  // background: vars.$button-gradient-light;
   @content;
+}
+
+/// Breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == vars.$bkp-500 {
+    @media screen and (min-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == vars.$bkp-650 {
+    @media screen and (min-width: 650px) {
+      @content;
+    }
+  } @else if $breakpoint == vars.$bkp-895 {
+    @media screen and (min-width: 895px) {
+      @content;
+    }
+  } @else if $breakpoint == vars.$bkp-1080 {
+    @media screen and (min-width: 1080px) {
+      @content;
+    }
+  } @else if $breakpoint == vars.$bkp-1440 {
+    @media screen and (min-width: 1440px) {
+      @content;
+    }
+  }
 }
