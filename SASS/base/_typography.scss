@@ -6,7 +6,7 @@
   font-weight: 700;
   font-size: 1.5rem; // 24px
   line-height: 1.2;
-  text-align: unset ;
+  text-align: unset;
   @content;
 }
 @mixin card-typo-title {
@@ -31,11 +31,19 @@
   font-size: 1.0625rem; // 17px
   line-height: 1.2;
   text-align: center;
+  @content;
 }
 
 @mixin home-typo-button {
   font-family: vars.$font-home-main;
   font-weight: 500;
   font-size: 1rem; // 16px
+  @content;
+}
+
+@mixin menu-typo-title {
+  font-family: vars.$font-logo;
+  font-weight: 400;
+  font-size: 1.75rem; // 28px
   @content;
 }

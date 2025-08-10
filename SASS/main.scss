@@ -19,9 +19,11 @@
 @use 'components/button';
 @use 'components/stepItem';
 @use 'components/loader';
+@use 'components/plat';
 
 // Pages
 @use 'pages/home';
+@use 'pages/menu';
 
 // Themes
 @use 'themes/default';

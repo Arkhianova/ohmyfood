@@ -2,20 +2,43 @@
 @use "../abstracts/mixins" as mix;
 @use "../base/typography" as typo;
 
+.home {
+  header,
+  form,
+  main,
+  footer {
+    animation: fadeIn 2s ease-in-out 3s both;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 .heroHome {
   @include mix.flex-cont(column, flex-start, center, 0rem);
   padding: 1.5rem 1.2rem 3.5rem 1.2rem;
   background-color: vars.$hero-bg;
 
   &__title {
-    @include typo.home-typo-title{
+    @include typo.home-typo-title {
       text-align: center;
     }
     @include mix.respond-to(vars.$bkp-500) {
-    font-size: 2rem;
+      font-size: 2rem;
     }
     @include mix.respond-to(vars.$bkp-895) {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
     }
     padding: 0.8rem 1.7rem;
   }

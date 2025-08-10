@@ -1,0 +1,118 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography" as typo;
+
+.plat {
+  @include mix.flex-cont(row, flex-start, center, 0);
+  background-color: vars.$white;
+  border-radius: 15px;
+  padding: 0.8rem 0 0.8rem 1rem;
+  @include mix.box-shadow(0, 4px, 15px, 0, rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+  position: relative;
+
+  /* Bande verte à droite */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.8rem;
+    height: 100%;
+    background-color: vars.$green;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+  }
+
+  /* Bloc titre + sous-titre */
+  &__info {
+    @include mix.flex-cont(column, flex-start, flex-start, 0.4rem);
+    flex: 1;
+    min-width: 0;
+    z-index: 1;
+    padding-right: 3rem;
+  }
+
+  &__title {
+    @include typo.home-typo-button {
+      font-size: 0.985rem;
+    }
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 3rem;
+  }
+
+  &__subtitle {
+    @include typo.card-typo-paragraph {
+      font-size: 0.78rem;
+      line-height: 1;
+      text-align: unset;
+    }
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* Bloc prix + bouton */
+  &__right {
+    @include mix.flex-cont(row, center, center, 0);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__price {
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
+    @include typo.card-typo-title {
+      font-size: 0.8rem;
+      line-height: 1;
+      text-align: unset;
+    }
+    transition: transform 0.5s ease-in-out;
+    background: transparent;
+  }
+
+  &__button {
+    background-color: vars.$white;
+    color: vars.$green;
+    border-radius: 50%;
+    padding: 0.15rem;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+    /* coche FA */
+    // &::before {
+    //   display: inline-block; /* pour autoriser transform */
+    //   transition: transform 1s ease-in-out 0.2s; /* rotation avec délai */
+     
+    // }
+  }
+
+  /* Hover */
+  &:hover {
+    &::after {
+      transform: translateX(0);
+    }
+    .plat__button {
+      transform: translateX(-1.15rem);
+    }
+    // .plat__button::before {
+    //   transform: rotate(360deg);
+    //   opacity: 1;
+    //   border-radius: 50%;
+    // }
+    .plat__price {
+      transform: translateX(-3.4rem);
+    }
+    .plat__title,
+    .plat__subtitle {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 200px;
+      padding-right: 3rem;
+    }
+  }
+}
