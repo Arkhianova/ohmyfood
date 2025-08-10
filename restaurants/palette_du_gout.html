@@ -39,16 +39,18 @@
       <section class="carte">
         <div>
           <h2 class="carte__title">La palette du goût</h2> 
-          <div class="restaurant-card__like">
-            <label for="like-4" class="like-label">
-              <i class="fa-regular fa-heart empty-heart"></i>
-              <i class="fa-solid fa-heart full-heart"></i>
-            </label>
-            <input type="checkbox" id="like-4" class="like-checkbox" hidden />
-        </div>
+          <div class="like">
+              <label for="like-palette" class="like-label">
+                <i class="fa-regular fa-heart like__heart--empty"></i>
+                <i class="fa-solid fa-heart like__heart--full"></i>
+              </label>
+              <input type="checkbox" id="like-palette" class="like-checkbox" hidden />
+            </div>
         </div>
         <article class="selection">
+
           <h3 class="selection__title"><span>Entr</span>ées</h3>
+
           <ul class="selection__list">
             <li class="plat">
               <div class="plat__info">
@@ -81,9 +83,12 @@
               </div>
             </li>
           </ul>
+
         </article>
         <article class="selection">
+
           <h3 class="selection__title"><span>Plat</span>s</h3>
+
           <ul class="selection__list">
             <li class="plat">
               <div class="plat__info">
@@ -116,9 +121,12 @@
               </div>
             </li>
           </ul>
+
         </article>
         <article class="selection">
+
           <h3 class="selection__title"><span>Dess</span>erts</h3>
+
           <ul class="selection__list">
             <li class="plat">
               <div class="plat__info">
@@ -151,6 +159,7 @@
               </div>
             </li>
           </ul>
+
         </article>
       </section>
       <a href="#restaurants" class="btn">Commander</a>

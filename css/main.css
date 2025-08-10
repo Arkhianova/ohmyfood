@@ -280,32 +280,6 @@ body {
   text-align: center;
   color: #101010;
 }
-.restaurant-card__like {
-  position: absolute;
-  bottom: 2.05rem;
-  right: 1.5rem;
-}
-.restaurant-card__like .fa-heart {
-  transform: scale(1.5);
-}
-.restaurant-card .like-label {
-  position: relative;
-  display: inline-block;
-}
-.restaurant-card .like-label .full-heart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-.restaurant-card__like:has(input:checked) .full-heart {
-  opacity: 1;
-}
 
 .btn {
   position: relative;
@@ -664,6 +638,33 @@ body {
   padding-right: 3rem;
 }
 
+.like {
+  position: absolute;
+  bottom: 2.05rem;
+  right: 1.5rem;
+}
+.like .fa-heart {
+  transform: scale(1.5);
+}
+.like-label {
+  position: relative;
+  display: inline-block;
+}
+.like__heart--full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.like:has(input:checked) .like__heart--full {
+  opacity: 1;
+}
+
 .home header,
 .home form,
 .home main,
@@ -899,16 +900,19 @@ body {
 .menu .carte article:nth-of-type(3) ul {
   animation: desserts 2s ease-out 1s backwards;
 }
-.menu .carte .restaurant-card__like {
-  position: relative;
-}
 .menu .carte__title {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 1.75rem;
 }
 .menu .carte > div {
+  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  align-self: center;
 }
 .menu .selection {
   display: flex;
@@ -950,6 +954,11 @@ body {
   padding-left: 3rem;
   padding-right: 3rem;
   margin: 0.5rem 0 2.3rem 0;
+}
+.menu .like {
+  position: relative;
+  bottom: unset;
+  right: unset;
 }
 
 @keyframes entrees {

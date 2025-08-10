@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography" as typo;
+
+.like {
+  position: absolute;
+  bottom: 2.05rem;
+  right: 1.5rem;
+  .fa-heart {
+    transform: scale(1.5);
+  }
+  &-label {
+    position: relative;
+    display: inline-block;
+  }
+  &__heart--full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: vars.$button-like;
+    background-clip: text;
+    color: transparent;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  &:has(input:checked) &__heart--full {
+    opacity: 1;
+  }
+}

@@ -43,16 +43,14 @@
       animation: desserts 2s ease-out 1s backwards;
     }
 
-    .restaurant-card__like {
-      position: relative
-    }
-
     &__title {
       @include typo.menu-typo-title;
     }
   }
   .carte > div {
-    display: flex;
+    position: relative;
+    @include mix.flex-cont(row, flex-start, center, 2rem);
+    align-self: center;
   }
 
   .selection {
@@ -74,7 +72,7 @@
     }
   }
   .main-menu {
-    background-color:vars.$hero-bg;
+    background-color: vars.$hero-bg;
     @include mix.flex-cont(column, flex-start, stretch, 0);
     .btn {
       align-self: center;
@@ -82,7 +80,11 @@
       padding-right: 3rem;
       margin: 0.5rem 0 2.3rem 0;
     }
-    
+  }
+  .like {
+    position: relative;
+    bottom: unset;
+    right: unset;
   }
 }
 

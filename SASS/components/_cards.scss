@@ -66,34 +66,4 @@
     }
   }
 
-  &__like {
-    position: absolute;
-    bottom: 2.05rem;
-    right: 1.5rem;
-  }
-
-  &__like .fa-heart {
-    transform: scale(1.5);
-  }
-  .like-label {
-    position: relative;
-    display: inline-block;
-
-    .full-heart {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      background: vars.$button-like;
-      background-clip: text;
-
-      color: transparent;
-
-      transition: opacity 0.5s ease;
-      pointer-events: none;
-    }
-  }
-  &__like:has(input:checked) .full-heart {
-    opacity: 1;
-  }
 }
