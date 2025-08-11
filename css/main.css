@@ -31,8 +31,14 @@ body {
   gap: 0;
   background-color: #ffffff;
   padding: 0.9rem 0 0.3rem 0;
+  min-height: 63px;
   z-index: 999;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 895px) {
+  .header {
+    height: 96px;
+  }
 }
 .header__logo {
   font-family: "Shrikhand", cursive;
@@ -42,7 +48,7 @@ body {
 }
 @media screen and (min-width: 895px) {
   .header__logo {
-    font-size: 2rem;
+    font-size: 2.1375rem;
   }
 }
 .header__back {
@@ -396,7 +402,7 @@ body {
   align-items: center;
   z-index: 9999;
   background: rgba(209, 209, 209, 0.2862745098);
-  animation: fadeOut 2.3s ease forwards;
+  animation: fadeOut 2.5s ease forwards;
 }
 
 @keyframes fadeOut {
@@ -404,7 +410,7 @@ body {
     opacity: 1;
   }
   90% {
-    opacity: 1;
+    opacity: 0.9;
   }
   100% {
     opacity: 0;
@@ -574,6 +580,11 @@ body {
   text-overflow: ellipsis;
   padding-right: 3rem;
 }
+@media screen and (min-width: 376px) {
+  .plat__title {
+    font-size: 1.125rem;
+  }
+}
 .plat__subtitle {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -585,6 +596,11 @@ body {
   text-align: unset;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 376px) {
+  .plat__subtitle {
+    font-size: 0.9376rem;
+  }
 }
 .plat__right {
   display: flex;
@@ -604,7 +620,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.2;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   line-height: 1;
   text-align: unset;
   transition: transform 0.5s ease-in-out;
@@ -636,6 +652,13 @@ body {
   text-overflow: ellipsis;
   max-width: 200px;
   padding-right: 3rem;
+}
+@media screen and (min-width: 500px) {
+  .plat:hover .plat__title,
+  .plat:hover .plat__subtitle {
+    overflow: unset;
+    text-overflow: unset;
+  }
 }
 
 .like {
@@ -669,7 +692,7 @@ body {
 .home form,
 .home main,
 .home footer {
-  animation: fadeIn 2s ease-in-out 3s both;
+  animation: fadeIn 1s ease-in-out 1.8s both;
 }
 @keyframes fadeIn {
   0% {
@@ -907,15 +930,29 @@ body {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 1.75rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 376px) {
+  .menu .carte__title {
+    font-family: "Shrikhand", cursive;
+    font-weight: 400;
+    font-size: 1.75rem;
+  }
 }
 .menu .carte > div {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  gap: 2rem;
-  align-self: center;
+  gap: 0rem;
+}
+@media screen and (min-width: 376px) {
+  .menu .carte > div {
+    align-self: center;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
 }
 .menu .selection {
   display: flex;
@@ -926,7 +963,7 @@ body {
   padding: 0;
   max-width: 634px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
 }
 .menu .selection__title {
   font-family: "Roboto", sans-serif;
@@ -966,7 +1003,7 @@ body {
   align-self: center;
   padding-left: 3rem;
   padding-right: 3rem;
-  margin: 2.3rem 0 2.3rem 0;
+  margin: 0 0 2.3rem 0;
 }
 .menu .like {
   position: relative;

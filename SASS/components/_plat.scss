@@ -41,6 +41,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     padding-right: 3rem;
+    @include mix.respond-to (vars.$bkp-376) {
+      font-size: 1.125rem;
+    }
   }
 
   &__subtitle {
@@ -51,6 +54,9 @@
     }
     white-space: nowrap;
     text-overflow: ellipsis;
+    @include mix.respond-to (vars.$bkp-376) {
+      font-size: 0.9376rem;
+    }
   }
 
   /* Bloc prix + bouton */
@@ -65,7 +71,7 @@
     top: 1rem;
     left: -1rem;
     @include typo.card-typo-title {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       line-height: 1;
       text-align: unset;
     }
@@ -113,6 +119,10 @@
       text-overflow: ellipsis;
       max-width: 200px;
       padding-right: 3rem;
+      @include mix.respond-to (vars.$bkp-500) {
+        overflow: unset;
+      text-overflow: unset;
+    }
     }
   }
 }

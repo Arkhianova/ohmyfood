@@ -3,7 +3,7 @@
 @use "../base/typography" as typo;
 
 .menu {
-  @include mix.flex-cont(column, flex-start,stretch, 0rem);
+  @include mix.flex-cont(column, flex-start, stretch, 0rem);
 
   .header {
     &__back {
@@ -31,7 +31,7 @@
     @include mix.flex-cont(column, flex-start, stretch, 1.6rem);
     position: relative;
     max-width: 1055px;
-     width: 100%;     /* pour qu’elle puisse s’adapter en dessous de 634px */
+    width: 100%; /* pour qu’elle puisse s’adapter en dessous de 634px */
     margin: -3rem auto 0 auto;
 
     article:nth-of-type(1) ul {
@@ -47,21 +47,30 @@
     }
 
     &__title {
-      @include typo.menu-typo-title;
+      @include typo.menu-typo-title {
+        font-size: 1.6rem;
+      }
+      @include mix.respond-to(vars.$bkp-376) {
+        @include typo.menu-typo-title;
+      }
     }
   }
   .carte > div {
     position: relative;
-    @include mix.flex-cont(row, flex-start, center, 2rem);
-    align-self: center;
+    @include mix.flex-cont(row, space-around, center, 0rem);
+    @include mix.respond-to(vars.$bkp-376) {
+      align-self: center;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
   }
 
   .selection {
     @include mix.flex-cont(column, flex-start, stretch, 1.2rem);
     padding: 0;
-      max-width: 634px;
-     width: 100%;    
-    margin:0 auto;
+    max-width: 634px;
+    width: 100%;
+    margin: 0 auto 1rem auto;
     &__title {
       @include typo.home-typo-button {
         font-weight: 300;
@@ -74,13 +83,12 @@
     }
     &__list {
       @include mix.flex-cont(column, space-between, stretch, 0.8rem);
-      
     }
   }
   .main-menu {
     background-color: vars.$white;
     @include mix.flex-cont(column, flex-start, stretch, 0);
-    section+section+div {
+    section + section + div {
       background-color: vars.$hero-bg;
       display: flex;
       justify-content: center;
@@ -92,10 +100,10 @@
       align-self: center;
       padding-left: 3rem;
       padding-right: 3rem;
-      margin: 2.3rem 0 2.3rem 0;
+      margin: 0 0 2.3rem 0;
     }
   }
-  
+
   .like {
     position: relative;
     bottom: unset;

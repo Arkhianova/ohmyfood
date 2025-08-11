@@ -51,7 +51,11 @@
 
 /// Breakpoints
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == vars.$bkp-500 {
+  @if $breakpoint == vars.$bkp-376 {
+    @media screen and (min-width: 376px) {
+      @content;
+    }
+  } @else if $breakpoint == vars.$bkp-500 {
     @media screen and (min-width: 500px) {
       @content;
     }
