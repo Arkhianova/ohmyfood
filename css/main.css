@@ -396,7 +396,7 @@ body {
   align-items: center;
   z-index: 9999;
   background: rgba(209, 209, 209, 0.2862745098);
-  animation: fadeOut 3s ease forwards;
+  animation: fadeOut 2.7s ease forwards;
 }
 
 @keyframes fadeOut {
@@ -924,7 +924,7 @@ body {
   gap: 1.2rem;
   padding: 0;
   max-width: 634px;
-  width: 100%; /* pour qu’elle puisse s’adapter en dessous de 634px */
+  width: 100%;
   margin: 0 auto;
 }
 .menu .selection__title {
@@ -957,7 +957,7 @@ body {
   align-self: center;
   padding-left: 3rem;
   padding-right: 3rem;
-  margin: 0.5rem 0 2.3rem 0;
+  margin: 2.3rem 0 2.3rem 0;
 }
 .menu .like {
   position: relative;

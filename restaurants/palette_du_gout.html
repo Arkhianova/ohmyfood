@@ -23,7 +23,11 @@
 
   <body class="menu">
     <header class="header">
-      <a href="../index.html" class="header__back" aria-label="Retour à l’accueil">
+      <a
+        href="../index.html"
+        class="header__back"
+        aria-label="Retour à l’accueil"
+      >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
       <h1 class="header__logo">ohmyfood</h1>
@@ -31,24 +35,25 @@
 
     <main class="main-menu">
       <section class="heroMenu">
-        <img
-          src="../assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-          alt="La Palette du Gout"
-      >
+        <img src="../assets/images/palette.jpg" alt="La Palette du Gout" />
       </section>
       <section class="carte">
         <div>
-          <h2 class="carte__title">La palette du goût</h2> 
+          <h2 class="carte__title">La palette du goût</h2>
           <div class="like">
-              <label for="like-palette" class="like-label">
-                <i class="fa-regular fa-heart like__heart--empty"></i>
-                <i class="fa-solid fa-heart like__heart--full"></i>
-              </label>
-              <input type="checkbox" id="like-palette" class="like-checkbox" hidden />
-            </div>
+            <label for="like-palette" class="like-label">
+              <i class="fa-regular fa-heart like__heart--empty"></i>
+              <i class="fa-solid fa-heart like__heart--full"></i>
+            </label>
+            <input
+              type="checkbox"
+              id="like-palette"
+              class="like-checkbox"
+              hidden
+            />
+          </div>
         </div>
         <article class="selection">
-
           <h3 class="selection__title"><span>Entr</span>ées</h3>
 
           <ul class="selection__list">
@@ -68,14 +73,16 @@
                 <p class="plat__subtitle">Et ses copeaux de truffe noire</p>
               </div>
               <div class="plat__right">
-                <p class="plat__price">35€</p>           
+                <p class="plat__price">35€</p>
                 <i class="fa-solid fa-check plat__button"></i>
               </div>
             </li>
             <li class="plat">
               <div class="plat__info">
                 <h4 class="plat__title">Œuf au plat</h4>
-                <p class="plat__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                <p class="plat__subtitle">
+                  Assaisonné à la truffe sur lit de caviar
+                </p>
               </div>
               <div class="plat__right">
                 <p class="plat__price">20€</p>
@@ -83,17 +90,17 @@
               </div>
             </li>
           </ul>
-
         </article>
         <article class="selection">
-
           <h3 class="selection__title"><span>Plat</span>s</h3>
 
           <ul class="selection__list">
             <li class="plat">
               <div class="plat__info">
                 <h4 class="plat__title">Filet de bœuf aux herbes</h4>
-                <p class="plat__subtitle">Accompagné de sa ribambelle de légumes</p>
+                <p class="plat__subtitle">
+                  Accompagné de sa ribambelle de légumes
+                </p>
               </div>
               <div class="plat__right">
                 <p class="plat__price">40€</p>
@@ -103,12 +110,14 @@
             <li class="plat">
               <div class="plat__info">
                 <h4 class="plat__title">Parmentier de queue de bœuf</h4>
-                <p class="plat__subtitle">À la truffe noire sur sa purée de panais</p>
+                <p class="plat__subtitle">
+                  À la truffe noire sur sa purée de panais
+                </p>
               </div>
               <div class="plat__right">
                 <p class="plat__price">35€</p>
                 <i class="fa-solid fa-check plat__button"></i>
-              </div>   
+              </div>
             </li>
             <li class="plat">
               <div class="plat__info">
@@ -121,10 +130,8 @@
               </div>
             </li>
           </ul>
-
         </article>
         <article class="selection">
-
           <h3 class="selection__title"><span>Dess</span>erts</h3>
 
           <ul class="selection__list">
@@ -140,8 +147,10 @@
             </li>
             <li class="plat">
               <div class="plat__info">
-                <h4 class="plat__title">Macaron au chocolat d'exception </h4>
-                <p class="plat__subtitle">Et glace à la vanille de Madagascar</p>
+                <h4 class="plat__title">Macaron au chocolat d'exception</h4>
+                <p class="plat__subtitle">
+                  Et glace à la vanille de Madagascar
+                </p>
               </div>
               <div class="plat__right">
                 <p class="plat__price">22€</p>
@@ -150,8 +159,10 @@
             </li>
             <li class="plat">
               <div class="plat__info">
-                <h4 class="plat__title">Mousse au chocolat </h4>
-                <p class="plat__subtitle">Au piment d'Espelette et à la truffe noire</p>
+                <h4 class="plat__title">Mousse au chocolat</h4>
+                <p class="plat__subtitle">
+                  Au piment d'Espelette et à la truffe noire
+                </p>
               </div>
               <div class="plat__right">
                 <p class="plat__price">23€</p>
@@ -159,14 +170,13 @@
               </div>
             </li>
           </ul>
-
         </article>
       </section>
       <a href="#restaurants" class="btn">Commander</a>
     </main>
 
     <footer class="footer">
-      <h3 class="footer__title">Ohmyselection</h3>
+      <h3 class="footer__title">Ohmyfood</h3>
       <ul class="footer__list">
         <li class="footer__item">
           <i class="fa-solid fa-utensils"></i>Proposer un restaurant

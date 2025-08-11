@@ -2,9 +2,10 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Ohmyfood</title>
+    <title>Ohmyselection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <base href="" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
@@ -13,7 +14,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -22,7 +22,11 @@
 
   <body class="menu">
     <header class="header">
-      <a href="index.html" class="header__back" aria-label="Retour à l’accueil">
+      <a
+        href="../index.html"
+        class="header__back"
+        aria-label="Retour à l’accueil"
+      >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
       <h1 class="header__logo">ohmyfood</h1>
@@ -30,106 +34,135 @@
 
     <main class="main-menu">
       <section class="heroMenu">
-        <img
-          src="../assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-          alt="La Palette du Gout"
-        />
+        <img src="../assets/images/francaise.jpg" alt="À la française" />
       </section>
       <section class="carte">
         <div>
-          <h2 class="carte__title"></h2>
-          <i class="carte__likeButton"></i>
+          <h2 class="carte__title">À la française</h2>
+          <div class="like">
+            <label for="like-francaise" class="like-label">
+              <i class="fa-regular fa-heart like__heart--empty"></i>
+              <i class="fa-solid fa-heart like__heart--full"></i>
+            </label>
+            <input
+              type="checkbox"
+              id="like-francaise"
+              class="like-checkbox"
+              hidden
+            />
+          </div>
         </div>
-        <article class="food">
-          <h3 class="food__title"></h3>
-          <ul class="food__list">
+
+        <article class="selection">
+          <h3 class="selection__title"><span>Entr</span>ées</h3>
+          <ul class="selection__list">
             <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__info">
+                <h4 class="plat__title">Tartare de poulpe acidulé</h4>
+                <p class="plat__subtitle">Aux zestes d'orange</p>
               </div>
-              <i class="plat__button"></i>
+              <div class="plat__right">
+                <p class="plat__price">25€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
             </li>
             <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__info">
+                <h4 class="plat__title">Velouté de légumes d'antan</h4>
+                <p class="plat__subtitle">Carotte, panais, topinambour</p>
               </div>
-              <i class="plat__button"></i>
+              <div class="plat__right">
+                <p class="plat__price">35€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
             </li>
             <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__info">
+                <h4 class="plat__title">Soupe à l'oignon</h4>
+                <p class="plat__subtitle">Revisitée</p>
               </div>
-              <i class="plat__button"></i>
-            </li>
-          </ul>
-        </article>
-        <article class="food">
-          <h3 class="food__title"></h3>
-          <ul class="food__list">
-            <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__right">
+                <p class="plat__price">20€</p>
+                <i class="fa-solid fa-check plat__button"></i>
               </div>
-              <i class="plat__button"></i>
-            </li>
-            <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
-              </div>
-              <i class="plat__button"></i>
-            </li>
-            <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
-              </div>
-              <i class="plat__button"></i>
             </li>
           </ul>
         </article>
-        <article class="food">
-          <h3 class="food__title"></h3>
-          <ul class="food__list">
+
+        <article class="selection">
+          <h3 class="selection__title"><span>Plat</span>s</h3>
+          <ul class="selection__list">
             <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__info">
+                <h4 class="plat__title">Coquilles Saint-Jacques</h4>
+                <p class="plat__subtitle">Accompagnées d'une purée de panais</p>
               </div>
-              <i class="plat__button"></i>
+              <div class="plat__right">
+                <p class="plat__price">40€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
             </li>
             <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__info">
+                <h4 class="plat__title">Magret de canard</h4>
+                <p class="plat__subtitle">Et parmentier de pommes de terre</p>
               </div>
-              <i class="plat__button"></i>
+              <div class="plat__right">
+                <p class="plat__price">35€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
             </li>
             <li class="plat">
-              <div>
-                <h4 class="plat__title"></h4>
-                <p class="plat__subtitle"></p>
-                <p class="plat__price"></p>
+              <div class="plat__info">
+                <h4 class="plat__title">Pigeonneau d’Ille-et-Vilaine</h4>
+                <p class="plat__subtitle">Sur son lit de gnocchis aux légumes</p>
               </div>
-              <i class="plat__button"></i>
+              <div class="plat__right">
+                <p class="plat__price">44€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="selection">
+          <h3 class="selection__title"><span>Dess</span>erts</h3>
+          <ul class="selection__list">
+            <li class="plat">
+              <div class="plat__info">
+                <h4 class="plat__title">Pétales de violettes glacés</h4>
+                <p class="plat__subtitle">Et purée de noisettes</p>
+              </div>
+              <div class="plat__right">
+                <p class="plat__price">18€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
+            </li>
+            <li class="plat">
+              <div class="plat__info">
+                <h4 class="plat__title">Fondant au chocolat</h4>
+                <p class="plat__subtitle">Revisité</p>
+              </div>
+              <div class="plat__right">
+                <p class="plat__price">22€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
+            </li>
+            <li class="plat">
+              <div class="plat__info">
+                <h4 class="plat__title">Millefeuille croustillant</h4>
+                <p class="plat__subtitle">Myrtilles et pâte d’amande</p>
+              </div>
+              <div class="plat__right">
+                <p class="plat__price">23€</p>
+                <i class="fa-solid fa-check plat__button"></i>
+              </div>
             </li>
           </ul>
         </article>
       </section>
+      <a href="#restaurants" class="btn">Commander</a>
     </main>
-
 
     <footer class="footer">
       <h3 class="footer__title">Ohmyfood</h3>
