@@ -880,7 +880,6 @@ body {
   object-position: center 63%;
 }
 .menu .carte {
-  margin-top: -3rem;
   padding: 1.8rem 1rem;
   border-radius: 35px;
   background-color: #f6f6f6;
@@ -890,6 +889,9 @@ body {
   align-items: stretch;
   gap: 1.6rem;
   position: relative;
+  max-width: 1055px;
+  width: 100%; /* pour qu’elle puisse s’adapter en dessous de 634px */
+  margin: -3rem auto 0 auto;
 }
 .menu .carte article:nth-of-type(1) ul {
   animation: entrees 2s ease-out;
@@ -920,8 +922,10 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   gap: 1.2rem;
-  width: 100%;
   padding: 0;
+  max-width: 634px;
+  width: 100%; /* pour qu’elle puisse s’adapter en dessous de 634px */
+  margin: 0 auto;
 }
 .menu .selection__title {
   font-family: "Roboto", sans-serif;
@@ -942,7 +946,7 @@ body {
   gap: 0.8rem;
 }
 .menu .main-menu {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

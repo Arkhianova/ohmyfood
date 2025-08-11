@@ -3,7 +3,7 @@
 @use "../base/typography" as typo;
 
 .menu {
-  @include mix.flex-cont(column, flex-start, stretch, 0rem);
+  @include mix.flex-cont(column, flex-start,stretch, 0rem);
 
   .header {
     &__back {
@@ -24,12 +24,14 @@
   }
 
   .carte {
-    margin-top: -3rem;
     padding: 1.8rem 1rem;
     border-radius: 35px;
     background-color: vars.$hero-bg;
     @include mix.flex-cont(column, flex-start, stretch, 1.6rem);
     position: relative;
+    max-width: 1055px;
+     width: 100%;     /* pour qu’elle puisse s’adapter en dessous de 634px */
+    margin: -3rem auto 0 auto;
 
     article:nth-of-type(1) ul {
       animation: entrees 2s ease-out;
@@ -55,8 +57,10 @@
 
   .selection {
     @include mix.flex-cont(column, flex-start, stretch, 1.2rem);
-    width: 100%;
     padding: 0;
+      max-width: 634px;
+     width: 100%;     /* pour qu’elle puisse s’adapter en dessous de 634px */
+    margin:0 auto;
     &__title {
       @include typo.home-typo-button {
         font-weight: 300;
@@ -69,10 +73,11 @@
     }
     &__list {
       @include mix.flex-cont(column, space-between, stretch, 0.8rem);
+      
     }
   }
   .main-menu {
-    background-color: vars.$hero-bg;
+    background-color: vars.$white;
     @include mix.flex-cont(column, flex-start, stretch, 0);
     .btn {
       align-self: center;
