@@ -18,8 +18,8 @@
     font-weight: 400;
     color: vars.$black;
     @include mixins.respond-to(vars.$bkp-895) {
-    font-size: 2.1375rem;
-  }
+      font-size: 2.1375rem;
+    }
   }
 
   &__back {
@@ -32,6 +32,4 @@
     opacity: 0;
     pointer-events: none;
   }
-
-  
 }

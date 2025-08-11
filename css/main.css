@@ -544,7 +544,6 @@ body {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
-  /* Bande verte à droite */
   /* Bloc titre + sous-titre */
   /* Bloc prix + bouton */
   /* Hover */
@@ -635,7 +634,6 @@ body {
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  /* coche FA */
 }
 .plat:hover::after {
   transform: translateX(0);

@@ -11,7 +11,7 @@
   @include mixins.respond-to(vars.$bkp-895) {
     @include mixins.flex-cont(row-reverse, flex-start, center, 5rem);
     height: 114px;
-    }
+  }
 
   &__title {
     font-family: vars.$font-logo;

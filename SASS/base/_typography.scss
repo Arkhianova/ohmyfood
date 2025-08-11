@@ -1,5 +1,4 @@
-@use '../abstracts/variables' as vars;
-
+@use "../abstracts/variables" as vars;
 
 @mixin home-typo-title {
   font-family: vars.$font-home-main;
@@ -9,6 +8,7 @@
   text-align: unset;
   @content;
 }
+
 @mixin card-typo-title {
   font-family: vars.$font-home-main;
   font-weight: 700;
@@ -25,6 +25,7 @@
   line-height: 1.2;
   text-align: center;
 }
+
 @mixin card-typo-paragraph {
   font-family: vars.$font-home-main;
   font-weight: 300;
