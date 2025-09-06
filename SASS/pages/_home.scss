@@ -26,11 +26,12 @@
 }
 
 .heroHome {
-  @include mix.flex-cont(column, flex-start, center, 0rem);
   padding: 1.5rem 1.2rem 3.5rem 1.2rem;
   background-color: vars.$hero-bg;
+  @include mix.flex-cont(column, flex-start, center, 0rem);
 
   &__title {
+    padding: 0.8rem 1.7rem;
     @include typo.home-typo-title {
       text-align: center;
     }
@@ -40,21 +41,19 @@
     @include mix.respond-to(vars.$bkp-895) {
       font-size: 2.5rem;
     }
-    padding: 0.8rem 1.7rem;
   }
 
   &__subtitle {
-    @include typo.home-typo-paragraph;
     padding: 0 0.8rem 1.8rem 1rem;
+    @include typo.home-typo-paragraph;
   }
 }
 
 .steps {
-  @include mix.flex-cont(column, flex-start, stretch, 1.8rem);
   padding: 3rem 1.2rem 4rem 1.25rem;
   background-color: vars.$white;
   max-width: 1080px;
-
+  @include mix.flex-cont(column, flex-start, stretch, 1.8rem);
   @include mix.respond-to(vars.$bkp-650) {
     max-width: 618px;
     align-items: flex-start;
@@ -74,10 +73,9 @@
   }
 
   &__list {
-    @include mix.flex-cont(column, flex-start, center, 1.5rem);
     counter-reset: step-counter;
     width: 100%;
-
+    @include mix.flex-cont(column, flex-start, center, 1.5rem);
     @include mix.respond-to(vars.$bkp-895) {
       @include mix.flex-cont(row, space-between, center, 2rem);
     }
@@ -85,20 +83,18 @@
 }
 
 .restaurants {
-  @include mix.flex-cont(column, flex-start, stretch, 1.2rem);
   padding: 3rem 1.2rem 4rem 1.25rem;
   background-color: vars.$hero-bg;
   background: vars.$hero-bg;
+  @include mix.flex-cont(column, flex-start, stretch, 1.2rem);
 
   &__title {
-    @include typo.home-typo-title;
     width: 100%;
-
+    @include typo.home-typo-title;
     @include mix.respond-to(vars.$bkp-650) {
       width: 100%;
       max-width: 618px;
     }
-
     @include mix.respond-to(vars.$bkp-895) {
       max-width: 1080px;
       align-self: center;
@@ -107,14 +103,12 @@
   }
 
   &__list {
-    @include mix.flex-cont(column, flex-start, flex-start, 1.2rem);
     width: 100%;
-
+    flex-wrap: wrap;
+    @include mix.flex-cont(column, flex-start, flex-start, 1.2rem);
     @include mix.respond-to(vars.$bkp-650) {
       @include mix.flex-cont(row, space-between, center, 1.5rem);
-      flex-wrap: wrap;
     }
-
     @include mix.respond-to(vars.$bkp-895) {
       gap: 3rem;
       width: 100%;

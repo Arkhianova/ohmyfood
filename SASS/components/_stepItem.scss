@@ -43,14 +43,14 @@
   }
   &__icon {
     color: vars.$color-step-icon;
-  }
-  &__icon--colored {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: vars.$primary;
-    opacity: 0;
-    z-index: 10;
+    &--colored {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: vars.$primary;
+      opacity: 0;
+      z-index: 10;
+    }
   }
 
   &:hover .stepItem__icon--colored {

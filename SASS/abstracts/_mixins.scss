@@ -24,7 +24,7 @@
 }
 
 /// Box shadow
-@mixin box-shadow($x, $y, $blur, $spread, $color) {
+@mixin box-shadow($x, $y, $blur: 0, $spread: 0, $color: rgba(0, 0, 0, 0.15)) {
   box-shadow: $x $y $blur $spread $color;
 }
 
@@ -47,28 +47,28 @@
 /// Breakpoints
 @mixin respond-to($breakpoint) {
   @if $breakpoint == vars.$bkp-376 {
-    @media screen and (min-width: 376px) {
-      @content;
+    @media (min-width: vars.$bkp-376) {
+       @content;
     }
   } @else if $breakpoint == vars.$bkp-500 {
-    @media screen and (min-width: 500px) {
-      @content;
+    @media (min-width: vars.$bkp-500) {
+       @content;
     }
   } @else if $breakpoint == vars.$bkp-650 {
-    @media screen and (min-width: 650px) {
-      @content;
+    @media (min-width: vars.$bkp-650) {
+       @content;
     }
   } @else if $breakpoint == vars.$bkp-895 {
-    @media screen and (min-width: 895px) {
-      @content;
+    @media (min-width: vars.$bkp-895) {
+       @content;
     }
   } @else if $breakpoint == vars.$bkp-1080 {
-    @media screen and (min-width: 1080px) {
-      @content;
+    @media (min-width: vars.$bkp-1080) {
+       @content;
     }
   } @else if $breakpoint == vars.$bkp-1440 {
-    @media screen and (min-width: 1440px) {
-      @content;
+    @media (min-width: vars.$bkp-1440) {
+       @content;
     }
   }
 }
